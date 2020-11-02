@@ -16,15 +16,12 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
-" Plug 'yuki-ycino/fzf-preview.vim'
-" Plug 'Valloric/YouCompleteMe', { 'do': 'python install.py' }
-" Plug 'tpope/vim-surround'
-" source ~/projects/aliapath/plugin/aliapth.vim
-Plug 'tpope/vim-fugitive'
+
 Plug 'rhysd/vim-notes-cli'
-Plug 'guljeny/aliapath'
-Plug 'guljeny/vim-fullscreen'
 Plug 'xolox/vim-notes'
+Plug 'guljeny/vim-fullscreen'
+Plug 'guljeny/aliapath'
+Plug 'tpope/vim-fugitive'
 
 " --- langs spec ----
 Plug 'pangloss/vim-javascript'
@@ -32,7 +29,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'slim-template/vim-slim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ap/vim-css-color'
-" Plug 'elzr/vim-json'
+Plug 'elzr/vim-json'
 call plug#end()
 
 " ----------- MAIN ------------
