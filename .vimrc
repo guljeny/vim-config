@@ -9,10 +9,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'ayu-theme/ayu-vim'
+" Plug 'ayu-theme/ayu-vim'
 
 Plug 'scrooloose/nerdtree'
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
@@ -30,6 +30,8 @@ Plug 'slim-template/vim-slim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ap/vim-css-color'
 Plug 'elzr/vim-json'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
 
 " ----------- MAIN ------------
@@ -89,6 +91,7 @@ let g:ycm_filepath_blacklist = {'*': 1}
 " map <leader-f> :Ag<CR>
 " map <leader-p> :Files<CR>
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+" let g:fzf_preview_window = ['downd:40%', 'ctrl-/']
 
 " -------- STYLING -------
 set termguicolors
