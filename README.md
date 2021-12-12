@@ -7,4 +7,5 @@ run vim (`nvim`)
 
 install plugins `:Pluginstall`
 
-`:ConInstall coc-tsserver`
+`:CocInstall coc-tsserver`
+`:CocInstall coc-eslint`

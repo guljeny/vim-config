@@ -17,16 +17,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
 
-Plug 'rhysd/vim-notes-cli'
-Plug 'xolox/vim-notes'
+" Plug 'rhysd/vim-notes-cli'
+" Plug 'xolox/vim-notes'
 Plug 'guljeny/vim-fullscreen'
 Plug 'guljeny/aliapath'
 Plug 'tpope/vim-fugitive'
 
 " --- langs spec ----
 Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
-Plug 'slim-template/vim-slim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ap/vim-css-color'
 Plug 'elzr/vim-json'
@@ -101,9 +99,9 @@ colorscheme PaperColor
 " colorscheme ayu
 
 " ------ ALE LINT ------
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\}
+" let g:ale_linters = {
+" \   'javascript': ['eslint'],
+" \}
 
 " ----- ALIA PATH -----
 
@@ -122,3 +120,4 @@ map <leader>o :OpenPath<CR>
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+let g:coc_global_extensions = ['coc-stylelintplus', 'coc-tsserver', 'coc-eslint']
