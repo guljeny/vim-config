@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " Plug 'ayu-theme/ayu-vim'
 
 Plug 'scrooloose/nerdtree'
@@ -24,6 +25,7 @@ Plug 'guljeny/aliapath'
 Plug 'tpope/vim-fugitive'
 
 " --- langs spec ----
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ap/vim-css-color'
@@ -95,6 +97,7 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 set termguicolors
 set background=light
 colorscheme PaperColor
+" colorscheme onehalfdark
 " let ayucolor="light" " mirage  | light | dark
 " colorscheme ayu
 

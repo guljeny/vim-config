@@ -1,0 +1,16 @@
+#!/bin/bash
+echo
+
+comand='
+tell application "iTerm"
+	activate
+	tell current window
+		create tab with default profile	
+	end tell
+	tell current session of current window
+		write text "nvim '$1'"
+	end tell
+end tell
+'
+
+osascript -e "$comand"
