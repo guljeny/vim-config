@@ -1,5 +1,9 @@
 {
   "tsserver.enableJavascript": false,
   "eslint.quiet": true,
-  "eslint.probe": ["javascript","javascriptreact", "typescript", "typescriptreact", "html","vue","markdown"]
+  "eslint.debug": true,
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.probe": ["javascript","javascriptreact", "typescript", "typescriptreact", "html","vue","markdown"],
+  "suggest.enablePreselect": false,
+  "suggest.noselect": true
 }

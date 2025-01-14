@@ -10,6 +10,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'altercation/vim-colors-solarized'
+Plug 'rebelot/kanagawa.nvim'
+" Plug 'baskerville/bubblegum'
 " Plug 'ayu-theme/ayu-vim'
 
 Plug 'scrooloose/nerdtree'
@@ -96,9 +99,9 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 " -------- STYLING -------
 set termguicolors
 set background=light
-colorscheme PaperColor
-" colorscheme onehalfdark
-" let ayucolor="light" " mirage  | light | dark
+" colorscheme bubblegum-256-light
+colorscheme papercolor
+let ayucolor="light" " mirage  | light | dark
 " colorscheme ayu
 
 " ------ ALE LINT ------
@@ -121,6 +124,18 @@ map <leader>o :OpenPath<CR>
 
 " ----- COC -------
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"function! CheckBackspace() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+
+"inoremap <expr> <Esc> coc#pum#visible() ? coc#pum#confirm() : "\<Esc>"
+"inoremap <silent><expr> <Tab>
+"      \ coc#pum#visible() ? coc#pum#next(1) :
+"      \ CheckBackspace() ? "\<Tab>" :
+"      \ coc#refresh()
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:coc_global_extensions = ['coc-stylelintplus', 'coc-tsserver', 'coc-eslint']
